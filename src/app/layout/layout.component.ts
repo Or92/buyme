@@ -32,6 +32,8 @@ export class LayoutComponent implements OnInit {
   }
 
   delete(i) {
+    if(this.tasks[i].completed)
+      this.tasksCompleted -= 1;
     this.tasks.splice(i, 1);
   }
 
@@ -53,7 +55,6 @@ export class LayoutComponent implements OnInit {
   }
 
   addCompletedTask(state: boolean) {
-    console.log(state);
     if (state)
       this.tasksCompleted += 1;
     else
