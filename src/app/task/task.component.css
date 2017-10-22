@@ -1,0 +1,8 @@
+.delete-button{
+  display: inline-block;
+  float: right;
+}
+
+.line-through{
+  text-decoration-line: line-through;
+}

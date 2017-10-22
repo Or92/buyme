@@ -1,0 +1,26 @@
+<div class="container">
+  <div *ngIf="popup" class="popup">
+    <label for="title">
+      Title:
+    </label>
+    <input [(ngModel)]="title" id="title" type="text"/>
+    <input type="submit" value="OK" (click)="add()">
+    <input (click)="popupToggle()" type="submit" value="Cancel">
+  </div>
+  <div class="header">
+    <div class="header-content">
+      <span>Tasks</span>
+      <button class="add-button" (click)="popupToggle()">+</button>
+    </div>
+  </div>
+  <div class="tasks">
+    <app-task (taskCompleted)="addCompletedTask($event)" (remove)="delete($event)"
+              *ngFor="let task of tasks; let i = index;" [completed]="task.completed" [i]="i"
+              [title]="task.title"></app-task>
+  </div>
+  <div class="footer">
+    <span>to be completed: {{tasks.length - tasksCompleted}}</span>
+    <span>completed: {{tasksCompleted}}</span>
+    <span>total: {{tasks.length}}</span>
+  </div>
+</div>

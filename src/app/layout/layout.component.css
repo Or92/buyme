@@ -1,0 +1,49 @@
+.container{
+  width: 100%;
+  background: ghostwhite;
+}
+
+.popup{
+  width: 100%;
+  position: absolute;
+  background: gray;
+  text-align: center;
+  padding-top: 10px;
+}
+.header{
+  background: #DBA659;
+  height: 30px;
+}
+
+.header button{
+  float: right;
+}
+
+.add-button{
+  border: 1px solid black;
+}
+
+.header-content{
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.footer{
+  font-size: 7px;
+  text-align: center;
+}
+
+.footer span{
+  padding: 0 5px;
+}
+
+.tasks{
+  width: 100%;
+}
+
+app-task{
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid black;
+}

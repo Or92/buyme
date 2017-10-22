@@ -1,0 +1,5 @@
+<div class="task">
+  <input type="checkbox" [checked]="completed" (change)="completed=!completed; checked(completed);">
+  {{i+1}}. <span class="title" [ngClass]="{'line-through':completed}">{{title}}</span>
+  <button class="delete-button" (click)="delete(i)">[X]</button>
+</div>
